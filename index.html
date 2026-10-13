@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Hatfield Trucking LLC · Grain, feed and dry bulk from Colby, Kansas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&family=Archivo:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      :root {
+        --x-ink: #14171C; --x-ink-2: #1E222A; --x-bg: #F5F3EE; --x-card: #FFFFFF;
+        --x-gold: #E3A72F; --x-gold-soft: #F6E3B8; --x-rust: #A6402A;
+        --x-muted: #5A5F68; --x-line: #E4E0D6;
+        --x-head: "Archivo", "Arial Narrow", sans-serif; --x-body: "Manrope", system-ui, sans-serif;
+        --x-max: 1240px; --x-pad: clamp(20px, 4vw, 48px);
+      }
+      html { color-scheme: light; }
+      body { background: var(--x-bg); color: var(--x-ink); font: 400 16px/1.6 var(--x-body); }
+      .page.x-site { max-width: none; padding: 0; display: block; }
+      .x-wrap { max-width: var(--x-max); margin: 0 auto; padding-inline: var(--x-pad); }
+      .x-site h1, .x-site h2, .x-site h3 { font-family: var(--x-head); font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; font-stretch: 90%; }
+      .x-site a { text-decoration: none; }
+      .x-site p { text-wrap: pretty; }
+
+      /* nav */
+      .x-nav { position: sticky; top: 0; z-index: 50; background: rgba(245, 243, 238, 0.86); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s; }
+      .x-nav.is-scrolled { border-color: var(--x-line); }
+      .x-nav__in { display: flex; align-items: center; gap: 24px; height: 76px; }
+      .x-logo { display: inline-flex; align-items: center; gap: 10px; font: 800 19px/1 var(--x-head); letter-spacing: 0.01em; font-stretch: 85%; color: var(--x-ink); }
+      .x-logo__mark { width: 34px; height: 34px; border-radius: 10px; background: var(--x-ink); display: grid; place-items: center; flex: none; }
+      .x-logo span em { font-style: normal; color: var(--x-rust); }
+      .x-logo { min-height: 44px; }
+      .x-verify { min-height: 44px; }
+      .x-info dd a, .x-foot ul a, .x-foot__base a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+      .x-foot ul { gap: 0; }
+      .x-nav__links { display: flex; gap: 30px; margin-left: auto; list-style: none; padding: 0; margin-block: 0; }
+      .x-nav__links a { font-weight: 600; font-size: 15px; color: var(--x-ink); opacity: .78; transition: opacity .2s; }
+      .x-nav__links a:hover { opacity: 1; }
+      .x-burger { display: none; margin-left: auto; width: 44px; height: 44px; border: 1px solid var(--x-line); border-radius: 999px; background: var(--x-card); cursor: pointer; }
+      .x-burger span { display: block; width: 18px; height: 2px; background: var(--x-ink); margin: 4px auto; transition: transform .25s; }
+
+      /* buttons */
+      .x-btn { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; padding: 6px 6px 6px 22px; border-radius: 999px; font: 700 15px/1 var(--x-body); background: var(--x-gold); color: var(--x-ink); border: 0; cursor: pointer; transition: transform .25s, background .25s; white-space: nowrap; }
+      .x-btn:hover { transform: translateY(-2px); }
+      .x-btn__ico { width: 36px; height: 36px; border-radius: 50%; background: var(--x-ink); color: #fff; display: grid; place-items: center; transition: transform .3s; }
+      .x-btn:hover .x-btn__ico { transform: rotate(-45deg); }
+      .x-btn--dark { background: var(--x-ink); color: #fff; }
+      .x-btn--dark .x-btn__ico { background: var(--x-gold); color: var(--x-ink); }
+      .x-btn--ghost { background: var(--x-ink); color: #fff; border: 1px solid rgba(255,255,255,.4); }
+      .x-btn--ghost .x-btn__ico { background: #fff; color: var(--x-ink); }
+      .x-btn--sm { min-height: 44px; font-size: 14px; padding-left: 18px; }
+      .x-btn--sm .x-btn__ico { width: 32px; height: 32px; }
+
+      /* type helpers */
+      .x-eyebrow { display: inline-flex; align-items: center; gap: 10px; font: 700 12px/1 var(--x-body); letter-spacing: .16em; text-transform: uppercase; color: var(--x-ink); margin-bottom: 18px; }
+      .x-eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--x-gold); }
+      .x-h2 { font-size: clamp(34px, 5vw, 56px); }
+      .x-lead { font-size: 18px; color: var(--x-muted); max-width: 58ch; }
+      .x-sec { padding-block: clamp(72px, 10vw, 128px); }
+      .x-sec__head { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 48px; flex-wrap: wrap; }
+      .x-sec__head .x-h2 { max-width: 16ch; }
+
+      /* hero */
+      .x-hero { padding: 8px var(--x-pad) 0; max-width: calc(var(--x-max) + 2 * var(--x-pad) + 160px); margin: 0 auto; }
+      .x-hero__frame { position: relative; border-radius: 24px; overflow: hidden; min-height: min(86vh, 780px); display: flex; align-items: flex-end; background: var(--x-ink); }
+      .x-hero__frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); animation: x-zoom 1.6s cubic-bezier(.2,.7,.2,1) forwards; }
+      @keyframes x-zoom { to { transform: scale(1); } }
+      .x-hero__frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(20deg, rgba(20,23,28,.92) 0%, rgba(20,23,28,.75) 34%, rgba(20,23,28,.4) 58%, rgba(20,23,28,0) 80%), linear-gradient(to right, rgba(20,23,28,.75) 0%, rgba(20,23,28,.45) 40%, rgba(20,23,28,0) 75%), rgba(20,23,28,.38); }
+      .x-hero h1 { text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+      .x-hero__copy { position: relative; z-index: 1; padding: clamp(28px, 5vw, 64px); max-width: 860px; color: #fff; }
+      .x-hero .x-eyebrow { color: #fff; }
+      .x-hero h1 { font-size: clamp(40px, 6.6vw, 84px); color: #fff; }
+      .x-hero__sub { margin-top: 22px; font-size: clamp(16px, 1.6vw, 19px); color: rgba(255,255,255,.84); max-width: 56ch; }
+      .x-hero__btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+      .x-trust { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 36px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.2); font-size: 14px; font-weight: 600; color: rgba(255,255,255,.88); }
+      .x-trust span { display: inline-flex; align-items: center; gap: 8px; }
+      .x-trust svg { color: var(--x-gold); flex: none; }
+
+      /* about */
+      .x-about { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
+      .x-about__text p + p { margin-top: 16px; }
+      .x-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 64px; }
+      .x-stat { background: var(--x-card); border-radius: 20px; padding: 28px 24px; border: 1px solid var(--x-line); }
+      .x-stat__fig { font: 800 clamp(48px, 6vw, 72px)/1 var(--x-head); letter-spacing: -0.03em; font-stretch: 85%; }
+      .x-stat__fig sup { color: var(--x-gold); font-size: .4em; vertical-align: top; margin-left: 2px; }
+      .x-stat__label { display: block; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--x-line); font-weight: 600; font-size: 15px; }
+      .x-stat__label small { display: block; font-weight: 500; color: var(--x-muted); font-size: 13px; }
+
+      /* service cards */
+      .x-services { background: var(--x-card); border-radius: 32px; margin-inline: clamp(8px, 2vw, 24px); }
+      .x-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .x-card { position: relative; border-radius: 24px; overflow: hidden; min-height: 460px; display: flex; flex-direction: column; justify-content: flex-end; background: var(--x-bg); transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s; }
+      .x-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -24px rgba(20,23,28,.35); }
+      .x-card__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+      .x-card:hover .x-card__img { transform: scale(1.05); }
+      .x-card--photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,23,28,.9), rgba(20,23,28,0) 62%); }
+      .x-card--photo { background: var(--x-ink); }
+      .x-card--gold { background: var(--x-gold); }
+      .x-card--ink { background: var(--x-ink); color: #fff; }
+      .x-card__body { position: relative; z-index: 1; padding: 28px; }
+      .x-card--photo .x-card__body { color: #fff; }
+      .x-card__num { position: absolute; top: 28px; left: 28px; z-index: 1; font: 700 13px/1 var(--x-body); letter-spacing: .14em; }
+      .x-card--photo .x-card__num { color: #fff; }
+      .x-card h3 { font-size: 30px; margin-bottom: 12px; }
+      .x-card p { font-size: 15.5px; opacity: .88; }
+      .x-card__art { position: absolute; top: 70px; left: 28px; right: 28px; opacity: .9; }
+      .x-card__arrow { position: absolute; top: 18px; right: 18px; z-index: 2; width: 48px; height: 48px; border-radius: 50%; background: #fff; color: var(--x-ink); display: grid; place-items: center; transition: transform .3s, background .3s; }
+      .x-card:hover .x-card__arrow { transform: rotate(-45deg); background: var(--x-gold); }
+      .x-card--gold .x-card__arrow { background: var(--x-ink); color: #fff; }
+      .x-card--ink .x-card__arrow { background: var(--x-gold); }
+
+      /* features */
+      .x-feats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .x-feat { background: var(--x-card); border: 1px solid var(--x-line); border-radius: 24px; padding: 36px 30px; transition: transform .35s, box-shadow .35s; }
+      .x-feat:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -28px rgba(20,23,28,.3); }
+      .x-feat__ico { width: 60px; height: 60px; border-radius: 16px; background: var(--x-ink); color: var(--x-gold); display: grid; place-items: center; margin-bottom: 40px; }
+      .x-feat h3 { font-size: 24px; margin-bottom: 12px; }
+      .x-feat p { color: var(--x-muted); font-size: 15.5px; }
+
+      /* fleet + drivers split */
+      .x-split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: center; }
+      .x-split--rev .x-split__media { order: 2; }
+      .x-split__media { position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 3.4; }
+      .x-split__media img { width: 100%; height: 100%; object-fit: cover; }
+      .x-badge { position: absolute; left: 20px; bottom: 20px; background: var(--x-card); border-radius: 16px; padding: 14px 18px; display: flex; gap: 12px; align-items: center; font-weight: 700; font-size: 14px; box-shadow: 0 12px 32px -12px rgba(20,23,28,.35); }
+      .x-badge b { font: 800 30px/1 var(--x-head); }
+      .x-split .x-lead { margin-top: 20px; }
+      .x-mix { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+      .x-mix div { background: var(--x-card); border: 1px solid var(--x-line); border-radius: 18px; padding: 20px; }
+      .x-mix b { display: block; font: 800 40px/1 var(--x-head); font-stretch: 85%; }
+      .x-mix span { font-size: 14px; color: var(--x-muted); font-weight: 600; }
+      .x-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+      .x-tags span { font-size: 13px; font-weight: 600; padding: 8px 14px; border-radius: 999px; background: var(--x-gold-soft); color: var(--x-ink); }
+
+      /* credentials */
+      .x-creds { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--x-card); border: 1px solid var(--x-line); border-radius: 24px; overflow: hidden; }
+      .x-cred { padding: 30px; border-right: 1px solid var(--x-line); border-bottom: 1px solid var(--x-line); }
+      .x-cred:nth-child(3n) { border-right: 0; }
+      .x-cred:nth-last-child(-n+3) { border-bottom: 0; }
+      .x-cred dt { font: 700 12px/1 var(--x-body); letter-spacing: .14em; text-transform: uppercase; color: var(--x-muted); margin-bottom: 14px; }
+      .x-cred dd { margin: 0; font: 700 24px/1.2 var(--x-head); letter-spacing: -0.01em; }
+      .x-cred dd small { display: block; font: 500 14px/1.5 var(--x-body); color: var(--x-muted); margin-top: 6px; letter-spacing: 0; }
+      .x-status { display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; margin-left: 8px; font: 700 12px/1 var(--x-body); padding: 6px 10px; border-radius: 999px; background: #E3F1E4; color: #1E6B2F; letter-spacing: 0; }
+      .x-status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+      .x-verify { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; font-weight: 700; color: var(--x-rust); border-bottom: 2px solid currentColor; padding-bottom: 2px; }
+
+      /* forms */
+      .x-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+      .x-field { display: grid; gap: 6px; }
+      .x-field--full { grid-column: 1 / -1; }
+      .x-field label { font-size: 13px; font-weight: 700; }
+      .x-field input, .x-field select, .x-field textarea { font: 500 15px/1.4 var(--x-body); color: var(--x-ink); background: var(--x-card); border: 1px solid var(--x-line); border-radius: 14px; padding: 13px 16px; min-height: 48px; width: 100%; transition: border-color .2s, box-shadow .2s; }
+      .x-field textarea { min-height: 112px; resize: vertical; }
+      .x-field input:focus, .x-field select:focus, .x-field textarea:focus { outline: none; border-color: var(--x-gold); box-shadow: 0 0 0 4px rgba(227,167,47,.22); }
+      .x-form .x-btn { justify-self: start; margin-top: 6px; }
+      .x-note { grid-column: 1 / -1; font-size: 13px; color: var(--x-muted); }
+
+      /* CTA band */
+      .x-cta { position: relative; border-radius: 32px; overflow: hidden; background: var(--x-ink); color: #fff; margin-inline: clamp(8px, 2vw, 24px); padding: clamp(64px, 9vw, 120px) 0; }
+      .x-cta__bg { position: absolute; inset: 0; background:
+        radial-gradient(circle at 85% 20%, rgba(227,167,47,.35), transparent 45%),
+        radial-gradient(circle at 10% 110%, rgba(166,64,42,.45), transparent 50%),
+        repeating-linear-gradient(115deg, rgba(255,255,255,.035) 0 2px, transparent 2px 22px), var(--x-ink); }
+      .x-cta .x-wrap { position: relative; }
+      .x-cta .x-eyebrow { color: #fff; }
+      .x-cta h2 { color: #fff; max-width: 14ch; }
+      .x-cta__top { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; }
+      .x-contact { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; margin-top: 56px; }
+      .x-panel { background: var(--x-bg); color: var(--x-ink); border-radius: 24px; padding: clamp(24px, 4vw, 44px); }
+      .x-panel h3 { font-size: 26px; }
+      .x-panel .x-form { margin-top: 24px; }
+      .x-info { background: var(--x-ink-2); border: 1px solid rgba(255,255,255,.1); border-radius: 24px; padding: clamp(24px, 4vw, 40px); display: grid; gap: 4px; align-content: start; }
+      .x-info__row { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+      .x-info__row:last-child { border-bottom: 0; }
+      .x-info__ico { width: 44px; height: 44px; border-radius: 12px; background: rgba(227,167,47,.14); color: var(--x-gold); display: grid; place-items: center; flex: none; }
+      .x-info dt { font: 700 12px/1 var(--x-body); letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 8px; }
+      .x-info dd { margin: 0; font-weight: 600; font-size: 16px; word-break: break-word; }
+      .x-info a:hover { color: var(--x-gold); }
+
+      /* footer */
+      .x-foot { background: var(--x-ink); color: rgba(255,255,255,.72); margin-top: clamp(72px, 10vw, 120px); padding: 80px 0 32px; }
+      .x-foot .x-logo { color: #fff; }
+      .x-foot .x-logo__mark { background: var(--x-gold); }
+      .x-foot__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.4fr; gap: 40px; }
+      .x-foot__desc { margin-top: 18px; max-width: 30ch; }
+      .x-foot h4 { margin: 0 0 18px; font: 700 12px/1 var(--x-body); letter-spacing: .16em; text-transform: uppercase; color: var(--x-gold); }
+      .x-foot ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+      .x-foot a { transition: color .2s; }
+      .x-foot a:hover { color: #fff; }
+      .x-foot__base { margin-top: 64px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); font-size: 14px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+      .x-foot__big { font: 800 clamp(48px, 13vw, 180px)/.9 var(--x-head); font-stretch: 80%; letter-spacing: -0.03em; color: rgba(255,255,255,.06); margin-top: 56px; white-space: nowrap; overflow: hidden; }
+
+      /* reveal */
+      .x-rv { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+      .x-rv.is-in { opacity: 1; transform: none; }
+      .x-d1 { transition-delay: .08s; } .x-d2 { transition-delay: .16s; } .x-d3 { transition-delay: .24s; }
+      @media (prefers-reduced-motion: reduce) { .x-rv { opacity: 1; transform: none; transition: none; } .x-hero__frame img { animation: none; transform: none; } }
+
+      /* responsive */
+      @media (max-width: 960px) {
+        .x-nav__links, .x-nav .x-btn { display: none; }
+        .x-burger { display: block; }
+        .x-nav.is-open .x-nav__links { display: grid; gap: 4px; position: absolute; top: 76px; left: 0; right: 0; padding: 12px var(--x-pad) 24px; background: var(--x-bg); border-bottom: 1px solid var(--x-line); }
+        .x-nav.is-open .x-nav__links a { display: block; padding: 12px 0; font-size: 18px; opacity: 1; }
+        .x-nav.is-open .x-burger span:first-child { transform: translateY(3px) rotate(45deg); }
+        .x-nav.is-open .x-burger span:last-child { transform: translateY(-3px) rotate(-45deg); }
+        .x-about, .x-split, .x-contact { grid-template-columns: 1fr; }
+        .x-split--rev .x-split__media { order: 0; }
+        .x-stats { grid-template-columns: 1fr 1fr; }
+        .x-cards, .x-feats { grid-template-columns: 1fr; }
+        .x-card { min-height: 380px; }
+        .x-creds { grid-template-columns: 1fr 1fr; }
+        .x-cred:nth-child(n) { border-right: 1px solid var(--x-line); border-bottom: 1px solid var(--x-line); }
+        .x-cred:nth-child(2n) { border-right: 0; }
+        .x-cred:nth-last-child(-n+2) { border-bottom: 0; }
+        .x-foot__grid { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 600px) {
+        .x-hero__frame { min-height: 88vh; }
+        .x-hero__btns .x-btn { flex: 1 1 100%; justify-content: space-between; }
+        .x-stat { padding: 22px 18px; }
+        .x-form, .x-mix { grid-template-columns: 1fr; }
+        .x-creds { grid-template-columns: 1fr; }
+        .x-cred:nth-child(n) { border-right: 0; border-bottom: 1px solid var(--x-line); }
+        .x-cred:last-child { border-bottom: 0; }
+        .x-foot__grid { grid-template-columns: 1fr; }
+        .x-logo { font-size: 17px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page x-site" id="top">
+      <header class="x-nav" id="x-nav">
+        <div class="x-wrap x-nav__in">
+          <a class="x-logo" href="#top" aria-label="Hatfield Trucking, back to top">
+            <span class="x-logo__mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E3A72F" stroke-width="1.8" stroke-linecap="round"><path d="M12 22V3"/><path d="M12 9c-2.6 0-4.2-1.6-4.2-4.2 2.6 0 4.2 1.6 4.2 4.2zM12 9c2.6 0 4.2-1.6 4.2-4.2-2.6 0-4.2 1.6-4.2 4.2zM12 14.5c-2.6 0-4.2-1.6-4.2-4.2 2.6 0 4.2 1.6 4.2 4.2zM12 14.5c2.6 0 4.2-1.6 4.2-4.2-2.6 0-4.2 1.6-4.2 4.2z"/></svg></span>
+            <span>HATFIELD <em>TRUCKING</em></span>
+          </a>
+          <ul class="x-nav__links" id="x-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#fleet">Fleet</a></li>
+            <li><a href="#safety">Safety</a></li>
+            <li><a href="#drivers">Drivers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <a class="x-btn x-btn--dark x-btn--sm" href="#contact">Request a quote <span class="x-btn__ico" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <button class="x-burger" id="x-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="x-links"><span></span><span></span></button>
+        </div>
+      </header>
+
+      <main>
+        <section class="x-hero" aria-label="Introduction">
+          <div class="x-hero__frame">
+            <img src="hatfield-hero.png" alt="A red semi pulling a grain trailer down a Kansas highway at sunset" />
+            <div class="x-hero__copy">
+              <p class="x-eyebrow x-rv">Colby, Kansas · USDOT 785246</p>
+              <h1 class="x-rv x-d1">Grain, feed and dry bulk, hauled right across the High Plains.</h1>
+              <p class="x-hero__sub x-rv x-d2">Hatfield Trucking is a for-hire carrier running Kansas, Nebraska and Oklahoma with a 23-truck fleet and an FMCSA Satisfactory safety rating.</p>
+              <div class="x-hero__btns x-rv x-d3">
+                <a class="x-btn" href="#contact">Request a quote <span class="x-btn__ico" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+                <a class="x-btn x-btn--ghost" href="#drivers">Drive with us <span class="x-btn__ico" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+              </div>
+              <div class="x-trust x-rv x-d3">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>FMCSA Satisfactory rating</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h6M7 14h10"/></svg>MC-396164</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hauling since 1998</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec" id="about">
+          <div class="x-wrap">
+            <div class="x-about">
+              <div class="x-rv">
+                <p class="x-eyebrow">About us</p>
+                <h2 class="x-h2">A Colby carrier built on harvest seasons.</h2>
+              </div>
+              <div class="x-about__text x-rv x-d1">
+                <p class="x-lead">Family-run out of Colby in northwest Kansas, Hatfield Trucking has held USDOT registration since December 1998 and contract operating authority since November 2000.</p>
+                <p class="x-lead">Shippers, elevators and brokers get a carrier that knows the roads between the field, the elevator and the mill.</p>
+              </div>
+            </div>
+            <div class="x-stats">
+              <div class="x-stat x-rv"><span class="x-stat__fig">23</span><span class="x-stat__label">Power units</span></div>
+              <div class="x-stat x-rv x-d1"><span class="x-stat__fig">23</span><span class="x-stat__label">Trailers</span></div>
+              <div class="x-stat x-rv x-d2"><span class="x-stat__fig">24</span><span class="x-stat__label">Drivers</span></div>
+              <div class="x-stat x-rv x-d3"><span class="x-stat__fig">3</span><span class="x-stat__label">States served <small>KS, NE, OK</small></span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec x-services" id="services">
+          <div class="x-wrap">
+            <div class="x-sec__head">
+              <div class="x-rv">
+                <p class="x-eyebrow">What we haul</p>
+                <h2 class="x-h2">Field to elevator to mill.</h2>
+              </div>
+              <a class="x-btn x-btn--dark x-rv x-d1" href="#contact">Get a quote <span class="x-btn__ico" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            </div>
+            <div class="x-cards">
+              <article class="x-card x-card--photo x-rv" id="grain">
+                <img class="x-card__img" src="hatfield-grain.png" alt="A hopper trailer loading wheat at a grain elevator" />
+                <span class="x-card__num">01</span>
+                <a class="x-card__arrow" href="#contact" aria-label="Request a grain and feed quote"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                <div class="x-card__body">
+                  <h3>Grain &amp; feed</h3>
+                  <p>Wheat, corn, sorghum, feed and hay moved from farm and elevator to terminal and mill.</p>
+                </div>
+              </article>
+              <article class="x-card x-card--gold x-rv x-d1" id="bulk">
+                <span class="x-card__num">02</span>
+                <svg class="x-card__art" viewBox="0 0 300 120" fill="none" stroke="#14171C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 30h200l-20 50h-30l-15-30-15 30h-30l-15-30-15 30H50z"/><path d="M220 30h30l20 25v25h-50"/><path d="M250 30v25h20"/><circle cx="70" cy="92" r="12"/><circle cx="100" cy="92" r="12"/><circle cx="245" cy="92" r="12"/><path d="M10 108h280" stroke-dasharray="2 10"/></svg>
+                <a class="x-card__arrow" href="#contact" aria-label="Request a dry bulk quote"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                <div class="x-card__body">
+                  <h3>Dry bulk</h3>
+                  <p>Hopper-bottom trailers for dry bulk commodities across the region.</p>
+                </div>
+              </article>
+              <article class="x-card x-card--ink x-rv x-d2" id="freight">
+                <span class="x-card__num">03</span>
+                <svg class="x-card__art" viewBox="0 0 300 120" fill="none" stroke="#E3A72F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="20" y="20" width="190" height="60" rx="4"/><path d="M210 35h35l25 25v20h-60"/><path d="M60 20v60M100 20v60M140 20v60M180 20v60" opacity=".4"/><circle cx="60" cy="92" r="12"/><circle cx="95" cy="92" r="12"/><circle cx="245" cy="92" r="12"/><path d="M10 108h280" stroke-dasharray="2 10"/></svg>
+                <a class="x-card__arrow" href="#contact" aria-label="Request a general freight quote"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                <div class="x-card__body">
+                  <h3>General freight</h3>
+                  <p>For-hire general freight hauling under our common carrier authority.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec" id="why">
+          <div class="x-wrap">
+            <div class="x-sec__head">
+              <div class="x-rv">
+                <p class="x-eyebrow">Why Hatfield</p>
+                <h2 class="x-h2">Rated, authorized and built for ag freight.</h2>
+              </div>
+            </div>
+            <div class="x-feats">
+              <article class="x-feat x-rv">
+                <div class="x-feat__ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+                <h3>Satisfactory safety rating</h3>
+                <p>Rated Satisfactory by the FMCSA, the highest rating a carrier can receive.</p>
+              </article>
+              <article class="x-feat x-rv x-d1">
+                <div class="x-feat__ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+                <h3>Fully authorized &amp; insured</h3>
+                <p>Active USDOT 785246 and MC-396164 common authority, with $750,000 liability coverage and a BOC-3 process agent on file.</p>
+              </article>
+              <article class="x-feat x-rv x-d2">
+                <div class="x-feat__ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V7h11v9M13 10h4l3 3v3h-7"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div>
+                <h3>Equipment for ag freight</h3>
+                <p>Peterbilt, Freightliner and Kenworth tractors pulling Wilson and Timpte grain trailers.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="x-sec" id="fleet" style="padding-top:0">
+          <div class="x-wrap x-split">
+            <div class="x-split__media x-rv">
+              <img src="hatfield-fleet.png" alt="Five Hatfield tractors parked beside a metal shop on the plains" />
+              <div class="x-badge"><b>23</b><span>tractors on<br />the road</span></div>
+            </div>
+            <div class="x-rv x-d1">
+              <p class="x-eyebrow">Our fleet</p>
+              <h2 class="x-h2">23 tractors. 23 trailers. Ready for harvest.</h2>
+              <p class="x-lead">Seven company-owned and sixteen term-leased tractors, matched to grain and hopper trailers built for the hauls our customers run every season.</p>
+              <div class="x-mix">
+                <div><b>7</b><span>Company-owned tractors</span></div>
+                <div><b>16</b><span>Term-leased tractors</span></div>
+              </div>
+              <div class="x-tags"><span>Peterbilt</span><span>Freightliner</span><span>Kenworth</span><span>Wilson</span><span>Timpte</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec" id="safety" style="padding-top:0">
+          <div class="x-wrap">
+            <div class="x-sec__head">
+              <div class="x-rv">
+                <p class="x-eyebrow">Credentials</p>
+                <h2 class="x-h2">Check our numbers before you book.</h2>
+              </div>
+            </div>
+            <dl class="x-creds x-rv">
+              <div class="x-cred"><dt>USDOT number</dt><dd>785246 <span class="x-status">Active</span></dd></div>
+              <div class="x-cred"><dt>MC number</dt><dd>MC-396164</dd></div>
+              <div class="x-cred"><dt>Authority</dt><dd>For-hire common carrier <small>of property, plus exempt for-hire</small></dd></div>
+              <div class="x-cred"><dt>Safety rating</dt><dd>Satisfactory</dd></div>
+              <div class="x-cred"><dt>Liability coverage</dt><dd>$750,000 <small>BIPD</small></dd></div>
+              <div class="x-cred"><dt>Operating area</dt><dd>Kansas, Nebraska, Oklahoma</dd></div>
+            </dl>
+            <a class="x-verify" href="https://safer.fmcsa.dot.gov/query.asp?query_param=USDOT&amp;query_string=785246&amp;query_type=queryCarrierSnapshot" target="_blank" rel="noopener">Verify us on FMCSA SAFER <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+          </div>
+        </section>
+
+        <section class="x-sec" id="drivers" style="padding-top:0">
+          <div class="x-wrap x-split x-split--rev">
+            <div class="x-split__media x-rv" style="aspect-ratio:4/5">
+              <img src="hatfield-driver.png" alt="A driver climbing into a truck cab at dawn" />
+            </div>
+            <div class="x-rv x-d1">
+              <p class="x-eyebrow">Careers</p>
+              <h2 class="x-h2">Drive for a carrier that knows your name.</h2>
+              <p class="x-lead">We're always looking for safe, experienced CDL drivers for regional grain and bulk runs across Kansas, Nebraska and Oklahoma.</p>
+              <form class="x-form" data-subject="Driver application" novalidate>
+                <div class="x-field"><label for="d-name">Name</label><input id="d-name" name="Name" autocomplete="name" required /></div>
+                <div class="x-field"><label for="d-phone">Phone</label><input id="d-phone" name="Phone" type="tel" autocomplete="tel" /></div>
+                <div class="x-field"><label for="d-email">Email</label><input id="d-email" name="Email" type="email" autocomplete="email" /></div>
+                <div class="x-field"><label for="d-cdl">CDL class</label><select id="d-cdl" name="CDL class"><option>Class A</option><option>Class B</option></select></div>
+                <div class="x-field x-field--full"><label for="d-years">Years of experience</label><input id="d-years" name="Years of experience" type="number" min="0" inputmode="numeric" /></div>
+                <div class="x-field x-field--full"><label for="d-msg">Message</label><textarea id="d-msg" name="Message"></textarea></div>
+                <button class="x-btn x-btn--dark" type="submit">Send application <span class="x-btn__ico" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+                <p class="x-note">Opens your email app with your details filled in.</p>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-cta" id="contact">
+          <div class="x-cta__bg" aria-hidden="true"></div>
+          <div class="x-wrap">
+            <div class="x-cta__top x-rv">
+              <div>
+                <p class="x-eyebrow">Contact</p>
+                <h2 class="x-h2">Need a load moved? Let's talk.</h2>
+              </div>
+              <a class="x-btn" href="tel:+17854622278">(785) 462-2278 <span class="x-btn__ico" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            </div>
+            <div class="x-contact">
+              <div class="x-panel x-rv">
+                <h3>Request a quote</h3>
+                <form class="x-form" data-subject="Quote request" novalidate>
+                  <div class="x-field"><label for="q-name">Name</label><input id="q-name" name="Name" autocomplete="name" required /></div>
+                  <div class="x-field"><label for="q-co">Company</label><input id="q-co" name="Company" autocomplete="organization" /></div>
+                  <div class="x-field"><label for="q-phone">Phone</label><input id="q-phone" name="Phone" type="tel" autocomplete="tel" /></div>
+                  <div class="x-field"><label for="q-email">Email</label><input id="q-email" name="Email" type="email" autocomplete="email" /></div>
+                  <div class="x-field x-field--full"><label for="q-com">Commodity</label><select id="q-com" name="Commodity"><option>Grain</option><option>Feed / hay</option><option>Dry bulk</option><option>General freight</option></select></div>
+                  <div class="x-field"><label for="q-from">Pickup location</label><input id="q-from" name="Pickup location" /></div>
+                  <div class="x-field"><label for="q-to">Delivery location</label><input id="q-to" name="Delivery location" /></div>
+                  <div class="x-field x-field--full"><label for="q-msg">Message</label><textarea id="q-msg" name="Message"></textarea></div>
+                  <button class="x-btn" type="submit">Request a quote <span class="x-btn__ico" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+                  <p class="x-note">Opens your email app with your details filled in.</p>
+                </form>
+              </div>
+              <dl class="x-info x-rv x-d1">
+                <div class="x-info__row"><span class="x-info__ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><dt>Phone</dt><dd><a href="tel:+17854622278">(785) 462-2278</a></dd></div></div>
+                <div class="x-info__row"><span class="x-info__ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span><div><dt>Email</dt><dd><a href="mailto:pegredmon_hatfieldtrucking@yahoo.com">pegredmon_hatfieldtrucking@yahoo.com</a></dd></div></div>
+                <div class="x-info__row"><span class="x-info__ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><dt>Address</dt><dd>1103 County Road 26<br />Colby, KS 67701</dd></div></div>
+                <div class="x-info__row"><span class="x-info__ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><dt>Hours</dt><dd>9 am – 6 pm</dd></div></div>
+              </dl>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <div class="x-foot__grid">
+            <div>
+              <a class="x-logo" href="#top" aria-label="Hatfield Trucking, back to top">
+                <span class="x-logo__mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14171C" stroke-width="1.8" stroke-linecap="round"><path d="M12 22V3"/><path d="M12 9c-2.6 0-4.2-1.6-4.2-4.2 2.6 0 4.2 1.6 4.2 4.2zM12 9c2.6 0 4.2-1.6 4.2-4.2-2.6 0-4.2 1.6-4.2 4.2zM12 14.5c-2.6 0-4.2-1.6-4.2-4.2 2.6 0 4.2 1.6 4.2 4.2zM12 14.5c2.6 0 4.2-1.6 4.2-4.2-2.6 0-4.2 1.6-4.2 4.2z"/></svg></span>
+                <span>HATFIELD TRUCKING</span>
+              </a>
+              <p class="x-foot__desc">Grain, feed and dry bulk trucking from Colby, Kansas.</p>
+            </div>
+            <div>
+              <h4>Company</h4>
+              <ul><li><a href="#about">About</a></li><li><a href="#fleet">Fleet</a></li><li><a href="#safety">Safety</a></li></ul>
+            </div>
+            <div>
+              <h4>Services</h4>
+              <ul><li><a href="#grain">Grain &amp; feed</a></li><li><a href="#bulk">Dry bulk</a></li><li><a href="#freight">General freight</a></li></ul>
+            </div>
+            <div>
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="tel:+17854622278">(785) 462-2278</a></li>
+                <li><a href="mailto:pegredmon_hatfieldtrucking@yahoo.com" style="word-break:break-all">pegredmon_hatfieldtrucking@yahoo.com</a></li>
+                <li>1103 County Road 26, Colby, KS 67701</li>
+              </ul>
+            </div>
+          </div>
+          <div class="x-foot__base">
+            <p>© 2026 Hatfield Trucking LLC · USDOT 785246 · MC-396164</p>
+            <p class="x-foot__credit">Independent concept preview · Developed by <a href="https://teta.dpdns.org" target="_blank" rel="noopener">Teta Digitals</a></p>
+            <a href="#top">Back to top ↑</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="hark.js"></script>
+    <script>
+      (function () {
+        var nav = document.getElementById("x-nav"), burger = document.getElementById("x-burger");
+        function onScroll() { nav.classList.toggle("is-scrolled", window.scrollY > 8); }
+        window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+        burger.addEventListener("click", function () {
+          var open = nav.classList.toggle("is-open");
+          burger.setAttribute("aria-expanded", open);
+          burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        });
+        [].forEach.call(nav.querySelectorAll(".x-nav__links a"), function (a) {
+          a.addEventListener("click", function () { nav.classList.remove("is-open"); burger.setAttribute("aria-expanded", "false"); });
+        });
+
+        var items = document.querySelectorAll(".x-rv");
+        if (!("IntersectionObserver" in window)) { [].forEach.call(items, function (el) { el.classList.add("is-in"); }); }
+        else {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+          }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+          [].forEach.call(items, function (el) { io.observe(el); });
+        }
+
+        var TO = "pegredmon_hatfieldtrucking@yahoo.com";
+        [].forEach.call(document.querySelectorAll("form[data-subject]"), function (form) {
+          form.addEventListener("submit", function (ev) {
+            ev.preventDefault();
+            var name = form.querySelector("[name='Name']");
+            if (!name.value.trim()) { name.focus(); name.setAttribute("aria-invalid", "true"); return; }
+            name.removeAttribute("aria-invalid");
+            var lines = [].map.call(form.querySelectorAll("input, select, textarea"), function (f) {
+              return f.name + ": " + (f.value.trim() || "-");
+            });
+            var subject = form.getAttribute("data-subject") + " from " + name.value.trim();
+            window.location.href = "mailto:" + TO + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
